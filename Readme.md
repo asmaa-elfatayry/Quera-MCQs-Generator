@@ -2,13 +2,18 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Welcome to the AI-Based Question Generator! This project is a graduation project that aims to simplify the process of generating multiple-choice questions from text using artificial intelligence. It provides a versatile platform that can benefit various user groups, including educators, students, and professionals in different domains.
+<div>
+  <img src="./Quera.gif" alt="Logo" width="330" height="330" align="right" style="margin-left: 40px;">
+  
+  <p align="left">
+    <em>Welcome to the AI-Based Question Generator!</em> This project is a graduation project that aims to simplify the process of generating multiple-choice questions from text using artificial intelligence. It provides a versatile platform that can benefit various user groups, including educators, students, and professionals in different domains.
+  </p>
+</div>
 
-![Logo](./Quera.gif)
 
 ## Live Repository
 
-Check out the live repository of the AI-Based Multiple-Choice Question Generator: [Live Repo](https://github.com/asmaa-elfatayry/Quera-MCQs-Generator)
+Check out the live repository of the AI-Based Multiple-Choice Question Generator: [Live Repo](https://asmaa-elfatayry.github.io/Quera-MCQs-Generator)
 
 ## Tools and Technologies Used
 
