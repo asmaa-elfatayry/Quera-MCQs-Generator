@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quera | Generate</title>
+    <link rel="shortcut icon" href="../images/question-mark .ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/spinner.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rochester&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="error-message"></div>
+
+    <div class="overlay">
+        <div class="sk-fading-circle">
+            <div class="sk-circle1 sk-circle"></div>
+            <div class="sk-circle2 sk-circle"></div>
+            <div class="sk-circle3 sk-circle"></div>
+            <div class="sk-circle4 sk-circle"></div>
+            <div class="sk-circle5 sk-circle"></div>
+            <div class="sk-circle6 sk-circle"></div>
+            <div class="sk-circle7 sk-circle"></div>
+            <div class="sk-circle8 sk-circle"></div>
+            <div class="sk-circle9 sk-circle"></div>
+            <div class="sk-circle10 sk-circle"></div>
+            <div class="sk-circle11 sk-circle"></div>
+            <div class="sk-circle12 sk-circle"></div>
+        </div>
+    </div>
+
+    <!-- start nav -->
+    <nav>
+        <h2 class="logo"><a href="../index.html"> <span>Q</span>uera</a></h2>
+        <ul class="pages">
+            <li><a href="../index.html">home</a></li>
+            <li><a href="../html/generate.html" class="active">generate</a></li>
+            <li><a href="../html/results.html">result</a></li>
+            <li><a href="../html/about.html">about</a></li>
+        </ul>
+        <ul class="menue">
+            <li class="bar">
+                <i class="fa fa-bars" style="font-size:30px;color:#332885"></i>
+
+            </li>
+            <li class="close" style="font-size:25px;color:#332885">
+
+                X
+            </li>
+        </ul>
+    </nav>
+    <!-- end nav -->
+    <!-- <img src="../images/Rectangle.png" alt="bg" class="Rectangle-background"> -->
+    <div class="rectangle-background"></div>
+    <textarea id="input-text" name="Text" aria-label="text area" placeholder="Enter Your Text Here..."></textarea>
+    <span class="count-char"></span>
+    <div class="btns-section">
+        <button type="button" class="cancel">Reset</button>
+        <button type="button" class="generate"> Generate</button>
+    </div>
+    <!-- js script -->
+    <script src="../js/index.js"></script>
+    <script>
+        // generateBtn.addEventListener("click", () => {
+        //     let input_text = document.querySelector("#input-text").value;
+        //     const encodedText = encodeURIComponent(input_text);
+
+        //     // Redirect to the result page with the input text as a parameter
+        //     window.location.href = `results.html?text=${encodedText}`;
+        // })
+    </script>
+</body>
+
+</html>

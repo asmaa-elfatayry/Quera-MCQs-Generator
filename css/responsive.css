@@ -1,0 +1,280 @@
+:root {
+  --yellow-color: #fed32c;
+  --btn-color: #8882b8;
+  --very-light-color: #e3e0ff;
+  --font-color: #332885;
+  --white: #ffffff;
+  --textarea-color: #484848;
+  --textarea-border: #f1f1f1;
+  --shadow: #dedede;
+  --res-bg: #e3e0ff;
+  --res-font: #484848;
+  --correct-ans: #2fa325;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+*::selection {
+  background-color: var(--btn-color);
+  color: var(--white);
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 375px) {
+  /* navbar & header */
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/home-mobile.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .main-image {
+    position: absolute;
+    width: 80%;
+    height: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+  }
+  nav ul.menue .close {
+    display: none;
+    justify-content: end;
+    z-index: 10000;
+    cursor: pointer;
+  }
+  nav ul.menue {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+  }
+  nav ul.pages {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: var(--white);
+    z-index: 100;
+    width: 200px;
+    height: 40vh;
+    justify-content: flex-start;
+    padding-top: 120px;
+    gap: 10px;
+  }
+
+  h2.logo a {
+    font-size: 34px;
+  }
+  h2.logo a span {
+    font-size: 40px;
+    padding-right: 2px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+
+    width: 100px;
+    height: 23px;
+    padding: 8px 6px;
+  }
+
+  ul li a.active,
+  ul li a:hover {
+    background-color: var(--yellow-color);
+    border-radius: 20.5px;
+    color: var(--white);
+    text-align: center;
+    padding: 8px 6px;
+  }
+
+  /* start index page style */
+  section.index {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 250px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 29px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+  section.index p {
+    font-size: 20px;
+    line-height: 35px;
+  }
+  section.index button {
+    width: 140px;
+    height: 50px;
+    margin-top: 30px;
+  }
+
+  section.index button a {
+    font-size: 19px;
+  }
+
+  /* end index page style */
+  /* generate page style */
+
+  .rectangle-background {
+    position: absolute;
+    width: 100%;
+    height: 170px;
+    top: 285px;
+    z-index: -1;
+    background-color: var(--very-light-color);
+  }
+  textarea {
+    padding: 15px;
+    line-height: 25px;
+    color: #332885;
+    font-size: 16px;
+    width: 83%;
+    height: 420px;
+    margin: 20px auto;
+  }
+  .count-char {
+    bottom: 19%;
+    right: 9%;
+  }
+  textarea::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  .btns-section {
+    width: 85%;
+    margin: 30px auto;
+  }
+  .btns-section button {
+    width: 130px;
+    height: 43px;
+
+    font-size: 16px;
+  }
+
+  /* end generate page style */
+  /* start about page */
+
+  .about-page {
+    display: flex;
+    justify-content: center;
+  }
+
+  .our-mission {
+    padding: 40px 20px;
+    position: absolute;
+    width: 80%;
+    height: 410px;
+    left: 4.5%;
+    top: 140px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .our-mission h3 {
+    width: auto;
+    height: auto;
+    left: 0;
+    top: 0;
+
+    font-size: 30px;
+    line-height: 47px;
+    color: var(--font-color);
+  }
+  .our-mission p {
+    padding-top: 18px;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .small-box {
+    display: none;
+  }
+
+  .small-line {
+    width: 70px;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 230px;
+  }
+  section.about {
+    margin-top: 550px;
+    width: 90%;
+  }
+  section.about h3 {
+    font-size: 22px;
+    line-height: 38px;
+    margin-bottom: 10px;
+  }
+  section.about p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  section.about button {
+    width: 120px;
+
+    margin-top: 20px;
+  }
+
+  section.about button a {
+    font-size: 15px;
+  }
+
+  /* start results pages styling */
+
+  #download-btn {
+    position: absolute;
+    right: 4.5%;
+    width: 150px;
+    height: 50px;
+    top: 110px;
+    font-size: 16px;
+  }
+
+  #mcq-questions {
+    width: 90%;
+    gap: 25px;
+    margin: 70px auto;
+  }
+  #mcq-questions div.question {
+    width: 90%;
+    border-radius: 41px;
+    padding: 20px;
+
+    font-size: 19px;
+    line-height: 32px;
+  }
+  #mcq-questions div.question p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    /* padding-right: 70px; */
+  }
+  #mcq-questions .choices li {
+    margin-bottom: 6px;
+  }
+
+  .error-message {
+    top: 100px;
+
+    font-size: 12px;
+
+    padding: 20px 10px;
+  }
+}
