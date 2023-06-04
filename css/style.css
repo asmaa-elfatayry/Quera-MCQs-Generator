@@ -127,7 +127,7 @@ section.index p {
   color: var(--btn-color);
 }
 section.index button {
-  width: 160px;
+  width: 190px;
   height: 55px;
   border-radius: 48.5px;
   margin-top: 50px;
@@ -179,8 +179,8 @@ textarea {
 }
 .count-char {
   position: absolute;
-  bottom: 21%;
-  right: 23%;
+  bottom: 153px;
+  right: 355px;
 }
 textarea::-webkit-scrollbar {
   width: 1em;
@@ -193,7 +193,9 @@ textarea::-webkit-scrollbar-thumb {
   background-color: var(--textarea-border);
 }
 textarea::placeholder {
-  color: var(--very-light-color);
+  color: #a9a6a6;
+  text-align: left;
+  font-size: 11px;
 }
 .btns-section {
   display: flex;

@@ -117,7 +117,7 @@ button {
     line-height: 35px;
   }
   section.index button {
-    width: 140px;
+    width: 155px;
     height: 50px;
     margin-top: 30px;
   }
@@ -153,7 +153,11 @@ button {
   textarea::-webkit-scrollbar {
     width: 0.5em;
   }
+  textarea::placeholder {
+    color: #a9a6a6;
 
+    font-size: 8px;
+  }
   .btns-section {
     width: 85%;
     margin: 30px auto;
