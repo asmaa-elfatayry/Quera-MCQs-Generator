@@ -51,17 +51,17 @@ function displayErrorMessage(message) {
 }
 
 // calc charchtars number
-// textarea.oninput = function () {
-//   "use strict";
-//   if (countCharchtars !== "") {
-//     countCharchtars.textContent = 0 + this.value.length;
-//     if (countCharchtars.textContent > 2500) {
-//       countCharchtars.style.color = "#f00";
-//     } else {
-//       countCharchtars.style.color = "#e3e0ff";
-//     }
-//   }
-// };
+textarea.oninput = function () {
+  "use strict";
+  if (countCharchtars !== "") {
+    countCharchtars.textContent = 0 + this.value.length;
+    if (countCharchtars.textContent > 3500) {
+      countCharchtars.style.color = "#f00";
+    } else {
+      countCharchtars.style.color = "#e3e0ff";
+    }
+  }
+};
 
 function storeMCQData(data) {
   localStorage.setItem("mcqData", JSON.stringify(data));
@@ -98,7 +98,7 @@ function generateMCQsAndRedirect(text) {
     })
     .catch((error) => {
       console.error("Error fetching MCQ data:", error);
-      displayErrorMessage("Failed to fetch MCQ data");
+      displayErrorMessage("please check your text format..");
     })
     .finally(() => {
       spinner.style.display = "none";
@@ -164,41 +164,38 @@ function displayMCQs(data) {
 // download pdf
 // ("Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.IBM has a rich history with machine learning. One of its own, Arthur Samuel, is credited for coining the term, “machine learning” with his research");
 function generatePDF() {
-  document
-    .getElementById("download-btn")
-    .addEventListener("click", function () {
-      const element = document.body; // Replace this with the desired element containing your content
+  const element = document.body; // Replace this with the desired element containing your content
 
-      // Exclude the navigation content
-      const navigationElement = document.querySelector("nav"); // Replace "navigation" with the ID of your navigation element
-      const downloadBtn = document.querySelector("#download-btn");
-      if (navigationElement || downloadBtn) {
-        navigationElement.style.display = "none";
-        downloadBtn.style.display = "none";
-      }
+  // Exclude the navigation content
+  const navigationElement = document.querySelector("nav"); // Replace "navigation" with the ID of your navigation element
+  const downloadBtn = document.querySelector("#download-btn");
+  if (navigationElement || downloadBtn) {
+    navigationElement.style.display = "none";
+    downloadBtn.style.display = "none";
+  }
 
-      // Generate the PDF content
-      const pdfContent = [
-        {
-          text: element.innerText,
-          fontSize: 12,
-          margin: [0, 0, 0, 10],
-        },
-      ];
+  // Generate the PDF content
+  const pdfContent = [
+    {
+      text: element.innerText,
+      fontSize: 12,
+      margin: [0, 0, 0, 10],
+    },
+  ];
 
-      // Create the PDF document
-      const documentDefinition = {
-        content: pdfContent,
-      };
+  // Create the PDF document
+  const documentDefinition = {
+    content: pdfContent,
+  };
 
-      // Generate the PDF and initiate the download
+  // Generate the PDF and initiate the download
+  pdfMake.createPdf(documentDefinition).download("mcq.pdf");
 
-      pdfMake.createPdf(documentDefinition).download("mcq.pdf");
-
-      // Restore the display of the navigation element
-      if (navigationElement || downloadBtn) {
-        navigationElement.style.display = "flex";
-        downloadBtn.style.display = "block";
-      }
-    });
+  // Restore the display of the navigation element
+  if (navigationElement || downloadBtn) {
+    navigationElement.style.display = "flex";
+    downloadBtn.style.display = "block";
+  }
 }
+
+document.getElementById("download-btn").addEventListener("click", generatePDF);
