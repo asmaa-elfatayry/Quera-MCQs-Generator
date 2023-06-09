@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 <div>
-  <img src="./images/logo.svg" alt="Logo" width="330" height="330" align="right" style="margin-left: 40px;">
+  <img src="./images/logo.svg" alt="Logo" width="300" height="120" align="right" style="margin-left: 40px;">
   
   <p align="left">
     <em>Welcome to the AI-Based Question Generator!</em> This project is a graduation project that aims to simplify the process of generating multiple-choice questions from text using artificial intelligence. It provides a versatile platform that can benefit various user groups, including educators, students, and professionals in different domains.
@@ -87,6 +87,6 @@ The AI-Based Question Generator project was developed by:
 - [Asmaa Elfatayry](https://github.com/asmaa-elfatayry)
 - [Rehab Adel](https://github.com/Rehab-Adel)
 - [Manar Ali](https://github.com/Manaraligomaa)
-- [Naden Abozayed ](https://github.com/)
+- [Naden Abozayed ](https://github.com/NadenAbozayed)
 
 We would like to express our gratitude to all the contributors who helped in various aspects of the project.
