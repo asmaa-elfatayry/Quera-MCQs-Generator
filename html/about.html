@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quera | About</title>
-    <link rel="shortcut icon" href="../images/question-mark .ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/question-mark.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <!-- font family -->
@@ -21,12 +21,12 @@
 <body>
     <!-- start nav -->
     <nav>
-        <h2 class="logo"><a href="../index.html"> <span>Q</span>uera</a></h2>
+        <h2 class="logo"><img src="../images/logo.svg" alt="logo"></h2>
         <ul class="pages">
             <li><a href="../index.html">home</a></li>
+            <li><a class="switch" href="../html/generate.html">generate</a></li>
             <li><a href="../html/about.html" class="active">about</a></li>
-            <li><a href="../html/generate.html">generate</a></li>
-            <li><a href="../html/results.html">result</a></li>
+
 
         </ul>
         <ul class="menue">
@@ -41,34 +41,39 @@
         </ul>
     </nav>
     <!-- end nav -->
-    <!-- <img src="../images/Rectangle.png" class="Rectangle-bg"> -->
+    <main>
 
-    <div class="rectangle-background"></div>
-    <!-- start about page content -->
-    <div class="about-page">
-        <!-- our mission box -->
-        <div class="our-mission">
-            <h3>Our Mission</h3>
-            <p>Welcome to our education platform through AI-driven conversion of text into multiple-choice questions.
-                Professors can effortlessly create tests and assessments, while students gain access to a vast question
-                bank that supports their learning journey. Save time and effort with our streamlined question-creation
-                process.
-            </p>
+        <div class="rectangle-background"></div>
+        <!-- start about page content -->
+        <div class="about-page">
+            <!-- our mission box -->
+            <div class="our-mission">
+                <h3>Our Mission</h3>
+                <p>Welcome to our education platform through AI-driven conversion of text into multiple-choice
+                    questions.
+                    Professors can effortlessly create tests and assessments, while students gain access to a vast
+                    question
+                    bank that supports their learning journey. Save time and effort with our streamlined
+                    question-creation
+                    process.
+                </p>
+            </div>
+            <!-- the box next of our mission  -->
+            <div class="small-box">
+                <img alt="question-img" src="../images/question.png">
+            </div>
+            <!-- the small dash -->
+            <div class="small-line">
+            </div>
+            <!-- the end section of about  -->
+            <section class="about">
+                <h3>START YOUR GENERATION NOW</h3>
+                <p>You can generate multiple-choice questions from input text </p>
+                <button type="button" onclick="window.location.href='../html/generate.html'">Start</button>
+            </section>
         </div>
-        <!-- the box next of our mission  -->
-        <div class="small-box">
-            <img alt="question-img" src="../images/question.png">
-        </div>
-        <!-- the small dash -->
-        <div class="small-line">
-        </div>
-        <!-- the end section of about  -->
-        <section class="about">
-            <h3>START YOUR GENERATION NOW</h3>
-            <p>You can generate multiple-choice questions from input text </p>
-            <button type="button"><a href="../html/generate.html">Start</a></button>
-        </section>
-    </div>
+    </main>
+
     <!-- js script -->
     <script src="../js/index.js"></script>
 </body>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quera | Generate</title>
-    <link rel="shortcut icon" href="../images/question-mark .ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/question-mark.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/spinner.css">
     <link rel="stylesheet" href="../css/responsive.css">
@@ -41,12 +41,13 @@
 
     <!-- start nav -->
     <nav>
-        <h2 class="logo"><a href="../index.html"> <span>Q</span>uera</a></h2>
+        <h2 class="logo"><img src="../images/logo.svg" alt="logo"></h2>
         <ul class="pages">
             <li><a href="../index.html">home</a></li>
+            <li><a class="switch active" href="../html/generate.html">generate</a></li>
             <li><a href="../html/about.html">about</a></li>
-            <li><a href="../html/generate.html" class="active">generate</a></li>
-            <li><a href="../html/results.html">result</a></li>
+
+
 
         </ul>
         <ul class="menue">
@@ -61,21 +62,43 @@
         </ul>
     </nav>
     <!-- end nav -->
-    <!-- <img src="../images/Rectangle.png" alt="bg" class="Rectangle-background"> -->
-    <div class="rectangle-background"></div>
-    <textarea id="input-text" name="Text" aria-label="text area" placeholder="Instructions & Rules:
-    1-Enter the text you want to generate MCQs from in the text area.
-    2-Make sure the text is in English and is grammatically correct.
-    3-Use proper punctuation and sentence structure to ensure accurate tokenization.
-    4-The text should be relevant to the [topic/subject] you want MCQs generated for.
-    5-Keep the text concise and focused on a specific [topic/subject]. The more specific the text, the more relevant and accurate the generated MCQs will be.
-    6-Avoid using [jargon/complex technical terms/ambiguous language] that could lead to ambiguous or confusing questions.
-    7-Experiment with different variations of the input text to generate a diverse set of MCQs."></textarea>
-    <span class="count-char"></span>
-    <div class="btns-section">
-        <button type="button" class="cancel">Reset</button>
-        <button type="button" class="generate"> Generate</button>
-    </div>
+    <main> <!-- <img src="../images/Rectangle.png" alt="bg" class="Rectangle-background"> -->
+
+        <div class="rectangle-background"></div>
+        <textarea id="input-text" name="Text" aria-label="text area" placeholder="Enter your text here..."></textarea>
+        <span class="count-char"></span>
+
+        <div class="btns-section">
+            <button type="button" class="cancel">Reset</button>
+            <button type="button" class="generate"> Generate</button>
+        </div>
+
+        <div class="read-rules">
+            <i class="fa fa-question " style="font-size:30px;color:#8882b8"></i>
+        </div>
+
+        <div class="rules">
+
+            <h2>Instructions & Rules:</h2>
+            <span class="close-rules">X</span>
+
+
+            <ol type="1">
+                <li>Enter the text you want to generate MCQs from in the text area.</li>
+                <li>Make sure the text is in English and is grammatically correct.</li>
+                <li>Use proper punctuation and sentence structure to ensure accurate tokenization.</li>
+                <li>The text should be relevant to the [topic/subject] you want MCQs generated for.</li>
+                <li>Experiment with different variations of the input text to generate a diverse set of MCQs.</li>
+                <li>Avoid using [jargon/complex technical terms/ambiguous language] that could lead to ambiguous or
+                    confusing questions.</li>
+                <li>Keep the text concise and focused on a specific [topic/subject]. The more specific the text, the
+                    more
+                    relevant and accurate the generated MCQs will be.</li>
+            </ol>
+        </div>
+
+    </main>
+
     <!-- js script -->
     <script src="../js/index.js"></script>
     <script>

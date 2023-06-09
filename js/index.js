@@ -1,5 +1,5 @@
 // control active navbar
-let allLinksNav = document.querySelectorAll("nav ul li a");
+const allLinksNav = document.querySelectorAll("nav ul li a");
 const textarea = document.querySelector("#input-text");
 let countCharchtars = document.querySelector(".count-char");
 const generateBtn = document.querySelector(".generate");
@@ -11,6 +11,13 @@ const errorMessage = document.querySelector(".error-message");
 const menue = document.querySelector(".menue .bar");
 const menueClose = document.querySelector(".menue .close");
 const menueOptions = document.querySelector(".pages");
+const switchNav = document.querySelector(".switch");
+const rulesMenue = document.querySelector(".rules");
+const readRules = document.querySelector(".read-rules");
+const closeRules = document.querySelector(".close-rules");
+document.querySelector(".logo").addEventListener("click", () => {
+  window.location.href = "../index.html";
+});
 // Add click event listeners to the navbar links
 allLinksNav.forEach((link) => {
   link.addEventListener("click", () => {
@@ -94,6 +101,8 @@ function generateMCQsAndRedirect(text) {
       storeMCQData(data);
 
       // Redirect to the results page
+      console.log(switchNav.textContent);
+
       window.location.href = "results.html";
     })
     .catch((error) => {
@@ -198,4 +207,13 @@ function generatePDF() {
   }
 }
 
-document.getElementById("download-btn").addEventListener("click", generatePDF);
+readRules.addEventListener("click", () => {
+  spinnerOverlay.style.display = "block";
+  rulesMenue.style.display = "block";
+  readRules.style.cursor = "pointer";
+});
+closeRules.addEventListener("click", () => {
+  spinnerOverlay.style.display = "none";
+  rulesMenue.style.display = "none";
+  readRules.style.cursor = "pointer";
+});

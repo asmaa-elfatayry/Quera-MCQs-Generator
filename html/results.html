@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quera | Result</title>
-    <link rel="shortcut icon" href="../images/question-mark .ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/question-mark.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <!-- font family -->
@@ -21,12 +21,13 @@
 
 <body class="result">
     <nav>
-        <h2 class="logo"><a href="../index.html"> <span>Q</span>uera</a></h2>
+        <h2 class="logo"><img src="../images/logo.svg" alt="logo"></h2>
         <ul class="pages">
             <li><a href="../index.html">home</a></li>
+            <li><a class="switch" href="../html/generate.html">generate</a></li>
             <li><a href="../html/about.html">about</a></li>
-            <li><a href="../html/generate.html">generate</a></li>
-            <li><a href="../html/results.html" class="active">result</a></li>
+
+
 
         </ul>
         <ul class="menue">
@@ -40,12 +41,16 @@
             </li>
         </ul>
     </nav>
+    <main>
 
-    <!-- generate questions section -->
-    <div class="container">
-        <button type="button" onclick="generatePDF()" id="download-btn">Download PDF</button>
-        <div id="mcq-questions"></div>
-    </div>
+        <!-- generate questions section -->
+        <div class="container">
+            <button type="button" onclick="generatePDF()" id="download-btn">Download PDF</button>
+            <p class="back"> <i class="fa fa-caret-left" style="font-size:30px;color:#332885"></i> Back to generate</p>
+            <div id="mcq-questions"></div>
+        </div>
+
+    </main>
 
 
     <!-- Include the jsPDF library -->
@@ -58,7 +63,16 @@
         window.addEventListener("DOMContentLoaded", () => {
             retrieveMCQData();
             console.log('result page');
+            document.querySelector('.switch').textContent = "results";
+            document.querySelector('.switch').classList.add('active');
+            document.getElementById("download-btn").addEventListener("click", generatePDF);
         });
+        document.querySelector('.back').addEventListener("click", () => {
+            window.location.href = "generate.html";
+            document.querySelector('.switch').textContent = "generate";
+
+        })
+
 
     </script>
 </body>
