@@ -12,7 +12,7 @@
 
 ## Live Repository
 
-Check out the live repository of the AI-Based Multiple-Choice Question Generator: [Live Repo](https://asmaa-elfatayry.github.io/Quera-MCQs-Generator/)
+Check out the live repository of the AI-Based Multiple-Choice Question Generator: [Live Repo](http://3.83.193.68/index.html)
 
 ## Tools and Technologies Used
 
