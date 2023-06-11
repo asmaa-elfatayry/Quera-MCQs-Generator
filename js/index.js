@@ -211,9 +211,11 @@ readRules.addEventListener("click", () => {
   spinnerOverlay.style.display = "block";
   rulesMenue.style.display = "block";
   readRules.style.cursor = "pointer";
+  rulesMenue.style.opacity='1';
 });
 closeRules.addEventListener("click", () => {
   spinnerOverlay.style.display = "none";
   rulesMenue.style.display = "none";
   readRules.style.cursor = "pointer";
+  rulesMenue.style.opacity='0';
 });
