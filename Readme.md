@@ -14,6 +14,11 @@
 
 Check out the live repository of the AI-Based Multiple-Choice Question Generator: [Live Repo](http://3.83.193.68/index.html)
 
+OR Scan 
+
+<img src="./Quera_QR.png" alt="QR" width="300" height="300" align="center" >
+
+
 ## Tools and Technologies Used
 
 ### Backend Tools
