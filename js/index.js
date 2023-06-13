@@ -12,9 +12,8 @@ const menue = document.querySelector(".menue .bar");
 const menueClose = document.querySelector(".menue .close");
 const menueOptions = document.querySelector(".pages");
 const switchNav = document.querySelector(".switch");
-const rulesMenue = document.querySelector(".rules");
-const readRules = document.querySelector(".read-rules");
-const closeRules = document.querySelector(".close-rules");
+
+const scrollBottom=document.querySelector(".scroll");
 document.querySelector(".logo").addEventListener("click", () => {
   window.location.href = "../index.html";
 });
@@ -57,18 +56,7 @@ function displayErrorMessage(message) {
   }, 2000);
 }
 
-// calc charchtars number
-textarea.oninput = function () {
-  "use strict";
-  if (countCharchtars !== "") {
-    countCharchtars.textContent = 0 + this.value.length;
-    if (countCharchtars.textContent > 3500) {
-      countCharchtars.style.color = "#f00";
-    } else {
-      countCharchtars.style.color = "#e3e0ff";
-    }
-  }
-};
+
 
 function storeMCQData(data) {
   localStorage.setItem("mcqData", JSON.stringify(data));
@@ -115,16 +103,6 @@ function generateMCQsAndRedirect(text) {
     });
 }
 
-generateBtn.addEventListener("click", () => {
-  console.log("start generate");
-  const inputText = document.getElementById("input-text").value;
-  generateMCQsAndRedirect(inputText);
-});
-
-cancelBtn.addEventListener("click", () => {
-  document.getElementById("input-text").value = "";
-  localStorage.removeItem("mcqData");
-});
 
 function retrieveMCQData() {
   const mcqData = JSON.parse(localStorage.getItem("mcqData"));
@@ -207,15 +185,16 @@ function generatePDF() {
   }
 }
 
-readRules.addEventListener("click", () => {
-  spinnerOverlay.style.display = "block";
-  rulesMenue.style.display = "block";
-  readRules.style.cursor = "pointer";
-  rulesMenue.style.opacity='1';
-});
-closeRules.addEventListener("click", () => {
-  spinnerOverlay.style.display = "none";
-  rulesMenue.style.display = "none";
-  readRules.style.cursor = "pointer";
-  rulesMenue.style.opacity='0';
-});
+
+
+ // scroling
+
+window.onscroll=function(){
+   // console.log(this.scrollY)
+
+   this.scrollY>=200?scrollBottom.style.display="none": scrollBottom.style.display="block";
+}
+scrollBottom.onclick=function(){
+  console.log('ok');
+  window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
+}

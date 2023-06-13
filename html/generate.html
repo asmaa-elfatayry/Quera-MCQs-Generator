@@ -102,13 +102,48 @@
     <!-- js script -->
     <script src="../js/index.js"></script>
     <script>
-        // generateBtn.addEventListener("click", () => {
-        //     let input_text = document.querySelector("#input-text").value;
-        //     const encodedText = encodeURIComponent(input_text);
+  // calc charchtars number
+  window.addEventListener("DOMContentLoaded", () => {
+    const textarea = document.querySelector("#input-text");
+    const rulesMenue = document.querySelector(".rules");
+const readRules = document.querySelector(".read-rules");
+const closeRules = document.querySelector(".close-rules");
+textarea.oninput = function () {
+  "use strict";
+  if (countCharchtars !== "") {
+    countCharchtars.textContent = 0 + this.value.length;
+    if (countCharchtars.textContent > 3500) {
+      countCharchtars.style.color = "#f00";
+    } else {
+      countCharchtars.style.color = "#e3e0ff";
+    }
+  }
+};
+generateBtn.addEventListener("click", () => {
+  console.log("start generate");
+  const inputText = document.getElementById("input-text").value;
+  generateMCQsAndRedirect(inputText);
+});
 
-        //     // Redirect to the result page with the input text as a parameter
-        //     window.location.href = `results.html?text=${encodedText}`;
-        // })
+cancelBtn.addEventListener("click", () => {
+  document.getElementById("input-text").value = "";
+  localStorage.removeItem("mcqData");
+});
+
+readRules.addEventListener("click", () => {
+  spinnerOverlay.style.display = "block";
+  rulesMenue.style.display = "block";
+  readRules.style.cursor = "pointer";
+  rulesMenue.style.opacity='1';
+});
+closeRules.addEventListener("click", () => {
+  spinnerOverlay.style.display = "none";
+  rulesMenue.style.display = "none";
+  readRules.style.cursor = "pointer";
+  rulesMenue.style.opacity='0';
+});
+
+  })
     </script>
 </body>
 
