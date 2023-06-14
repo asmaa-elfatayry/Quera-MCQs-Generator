@@ -2,149 +2,149 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quera | Generate</title>
-    <link rel="shortcut icon" href="../images/question-mark.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/spinner.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <!-- font family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rochester&display=swap"
-        rel="stylesheet">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quera | Generate</title>
+  <link rel="shortcut icon" href="../images/question-mark.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/spinner.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <!-- font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rochester&display=swap"
+    rel="stylesheet">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
-    <div class="error-message"></div>
+  <div class="error-message"></div>
 
-    <div class="overlay">
-        <div class="sk-fading-circle">
-            <div class="sk-circle1 sk-circle"></div>
-            <div class="sk-circle2 sk-circle"></div>
-            <div class="sk-circle3 sk-circle"></div>
-            <div class="sk-circle4 sk-circle"></div>
-            <div class="sk-circle5 sk-circle"></div>
-            <div class="sk-circle6 sk-circle"></div>
-            <div class="sk-circle7 sk-circle"></div>
-            <div class="sk-circle8 sk-circle"></div>
-            <div class="sk-circle9 sk-circle"></div>
-            <div class="sk-circle10 sk-circle"></div>
-            <div class="sk-circle11 sk-circle"></div>
-            <div class="sk-circle12 sk-circle"></div>
-        </div>
+  <div class="overlay">
+    <div class="sk-fading-circle">
+      <div class="sk-circle1 sk-circle"></div>
+      <div class="sk-circle2 sk-circle"></div>
+      <div class="sk-circle3 sk-circle"></div>
+      <div class="sk-circle4 sk-circle"></div>
+      <div class="sk-circle5 sk-circle"></div>
+      <div class="sk-circle6 sk-circle"></div>
+      <div class="sk-circle7 sk-circle"></div>
+      <div class="sk-circle8 sk-circle"></div>
+      <div class="sk-circle9 sk-circle"></div>
+      <div class="sk-circle10 sk-circle"></div>
+      <div class="sk-circle11 sk-circle"></div>
+      <div class="sk-circle12 sk-circle"></div>
+    </div>
+  </div>
+
+  <!-- start nav -->
+  <nav>
+    <h2 class="logo"><img src="../images/logo.svg" alt="logo"></h2>
+    <ul class="pages">
+      <li><a href="../index.html">home</a></li>
+      <li><a class="switch active" href="../html/generate.html">generate</a></li>
+      <li><a href="../html/about.html">about</a></li>
+
+
+
+    </ul>
+    <ul class="menue">
+      <li class="bar">
+        <i class="fa fa-bars" style="font-size:30px;color:#332885"></i>
+
+      </li>
+      <li class="close" style="font-size:25px;color:#332885">
+
+        X
+      </li>
+    </ul>
+  </nav>
+  <!-- end nav -->
+  <main> <!-- <img src="../images/Rectangle.png" alt="bg" class="Rectangle-background"> -->
+
+    <div class="rectangle-background"></div>
+    <textarea id="input-text" name="Text" aria-label="text area" placeholder="Enter your text here..."></textarea>
+    <span class="count-char"></span>
+
+    <div class="btns-section">
+      <button type="button" class="cancel">Reset</button>
+      <button type="button" class="generate"> Generate</button>
     </div>
 
-    <!-- start nav -->
-    <nav>
-        <h2 class="logo"><img src="../images/logo.svg" alt="logo"></h2>
-        <ul class="pages">
-            <li><a href="../index.html">home</a></li>
-            <li><a class="switch active" href="../html/generate.html">generate</a></li>
-            <li><a href="../html/about.html">about</a></li>
+    <div class="read-rules">
+      <i class="fa fa-question " style="font-size:30px;color:#8882b8"></i>
+    </div>
+
+    <div class="rules">
+
+      <h2>Instructions & Rules:</h2>
+      <span class="close-rules">X</span>
 
 
+      <ol type="1">
+        <li>Enter the text you want to generate MCQs from in the text area.</li>
+        <li>Make sure the text is in English and is grammatically correct.</li>
+        <li>Use proper punctuation and sentence structure to ensure accurate tokenization.</li>
+        <li>The text should be relevant to the [topic/subject] you want MCQs generated for.</li>
+        <li>Experiment with different variations of the input text to generate a diverse set of MCQs.</li>
+        <li>Avoid using [jargon/complex technical terms/ambiguous language] that could lead to ambiguous or
+          confusing questions.</li>
+        <li>Keep the text concise and focused on a specific [topic/subject]. The more specific the text, the
+          more
+          relevant and accurate the generated MCQs will be.</li>
+      </ol>
+    </div>
 
-        </ul>
-        <ul class="menue">
-            <li class="bar">
-                <i class="fa fa-bars" style="font-size:30px;color:#332885"></i>
+  </main>
 
-            </li>
-            <li class="close" style="font-size:25px;color:#332885">
+  <!-- js script -->
+  <script src="../js/index.js"></script>
+  <script>
+    // calc charchtars number
+    window.addEventListener("DOMContentLoaded", () => {
+      const textarea = document.querySelector("#input-text");
+      const rulesMenue = document.querySelector(".rules");
+      const readRules = document.querySelector(".read-rules");
+      const closeRules = document.querySelector(".close-rules");
+      textarea.oninput = function () {
+        "use strict";
+        if (countCharchtars !== "") {
+          countCharchtars.textContent = 0 + this.value.length;
+          if (countCharchtars.textContent > 3500) {
+            countCharchtars.style.color = "#f00";
+          } else {
+            countCharchtars.style.color = "#e3e0ff";
+          }
+        }
+      };
+      generateBtn.addEventListener("click", () => {
+        console.log("start generate");
+        const inputText = document.getElementById("input-text").value;
+        generateMCQsAndRedirect(inputText);
+      });
 
-                X
-            </li>
-        </ul>
-    </nav>
-    <!-- end nav -->
-    <main> <!-- <img src="../images/Rectangle.png" alt="bg" class="Rectangle-background"> -->
+      cancelBtn.addEventListener("click", () => {
+        document.getElementById("input-text").value = "";
+        localStorage.removeItem("mcqData");
+      });
 
-        <div class="rectangle-background"></div>
-        <textarea id="input-text" name="Text" aria-label="text area" placeholder="Enter your text here..."></textarea>
-        <span class="count-char"></span>
+      readRules.addEventListener("click", () => {
+        spinnerOverlay.style.display = "block";
+        rulesMenue.style.display = "block";
+        readRules.style.cursor = "pointer";
+        rulesMenue.style.opacity = '1';
+      });
+      closeRules.addEventListener("click", () => {
+        spinnerOverlay.style.display = "none";
+        rulesMenue.style.display = "none";
+        readRules.style.cursor = "pointer";
+        rulesMenue.style.opacity = '0';
+      });
 
-        <div class="btns-section">
-            <button type="button" class="cancel">Reset</button>
-            <button type="button" class="generate"> Generate</button>
-        </div>
-
-        <div class="read-rules">
-            <i class="fa fa-question " style="font-size:30px;color:#8882b8"></i>
-        </div>
-
-        <div class="rules">
-
-            <h2>Instructions & Rules:</h2>
-            <span class="close-rules">X</span>
-
-
-            <ol type="1">
-                <li>Enter the text you want to generate MCQs from in the text area.</li>
-                <li>Make sure the text is in English and is grammatically correct.</li>
-                <li>Use proper punctuation and sentence structure to ensure accurate tokenization.</li>
-                <li>The text should be relevant to the [topic/subject] you want MCQs generated for.</li>
-                <li>Experiment with different variations of the input text to generate a diverse set of MCQs.</li>
-                <li>Avoid using [jargon/complex technical terms/ambiguous language] that could lead to ambiguous or
-                    confusing questions.</li>
-                <li>Keep the text concise and focused on a specific [topic/subject]. The more specific the text, the
-                    more
-                    relevant and accurate the generated MCQs will be.</li>
-            </ol>
-        </div>
-
-    </main>
-
-    <!-- js script -->
-    <script src="../js/index.js"></script>
-    <script>
-  // calc charchtars number
-  window.addEventListener("DOMContentLoaded", () => {
-    const textarea = document.querySelector("#input-text");
-    const rulesMenue = document.querySelector(".rules");
-const readRules = document.querySelector(".read-rules");
-const closeRules = document.querySelector(".close-rules");
-textarea.oninput = function () {
-  "use strict";
-  if (countCharchtars !== "") {
-    countCharchtars.textContent = 0 + this.value.length;
-    if (countCharchtars.textContent > 3500) {
-      countCharchtars.style.color = "#f00";
-    } else {
-      countCharchtars.style.color = "#e3e0ff";
-    }
-  }
-};
-generateBtn.addEventListener("click", () => {
-  console.log("start generate");
-  const inputText = document.getElementById("input-text").value;
-  generateMCQsAndRedirect(inputText);
-});
-
-cancelBtn.addEventListener("click", () => {
-  document.getElementById("input-text").value = "";
-  localStorage.removeItem("mcqData");
-});
-
-readRules.addEventListener("click", () => {
-  spinnerOverlay.style.display = "block";
-  rulesMenue.style.display = "block";
-  readRules.style.cursor = "pointer";
-  rulesMenue.style.opacity='1';
-});
-closeRules.addEventListener("click", () => {
-  spinnerOverlay.style.display = "none";
-  rulesMenue.style.display = "none";
-  readRules.style.cursor = "pointer";
-  rulesMenue.style.opacity='0';
-});
-
-  })
-    </script>
+    })
+  </script>
 </body>
 
 </html>

@@ -13,7 +13,6 @@ const menueClose = document.querySelector(".menue .close");
 const menueOptions = document.querySelector(".pages");
 const switchNav = document.querySelector(".switch");
 
-const scrollBottom=document.querySelector(".scroll");
 document.querySelector(".logo").addEventListener("click", () => {
   window.location.href = "../index.html";
 });
@@ -56,53 +55,73 @@ function displayErrorMessage(message) {
   }, 2000);
 }
 
-
-
 function storeMCQData(data) {
   localStorage.setItem("mcqData", JSON.stringify(data));
   console.log(localStorage.getItem("mcqData"));
 }
-function generateMCQsAndRedirect(text) {
-  if (!text) {
-    displayErrorMessage("Please enter valid input!");
-    return;
+
+function validateAndSanitizeText(text) {
+  // Remove any unwanted characters or symbols from the text
+  const sanitizedText = text.replace(/[^\w\s.]/gi, "");
+
+  // Check if the sanitized text is empty or too short
+  if (!sanitizedText || sanitizedText.length < 10) {
+    throw new Error("Invalid input text");
   }
-  spinner.style.display = "block";
-  spinnerOverlay.style.display = "block";
 
-  const apiUrl = "http://164.92.191.184:5000/generate-mcq";
-  const textData = text;
-  const requestData = {
-    text: textData,
-  };
-
-  fetch(apiUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(requestData),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      // Save the data in local storage
-      storeMCQData(data);
-
-      // Redirect to the results page
-      console.log(switchNav.textContent);
-
-      window.location.href = "results.html";
-    })
-    .catch((error) => {
-      console.error("Error fetching MCQ data:", error);
-      displayErrorMessage("Failed to fetch MCQ data");
-    })
-    .finally(() => {
-      spinner.style.display = "none";
-      spinnerOverlay.style.display = "none";
-    });
+  return sanitizedText;
 }
 
+function generateMCQsAndRedirect(text) {
+  try {
+    const sanitizedText = validateAndSanitizeText(text);
+
+    // Rest of your code to make the API request and handle the response
+    if (!text) {
+      displayErrorMessage("Please enter valid input!");
+      return;
+    }
+    spinner.style.display = "block";
+    spinnerOverlay.style.display = "block";
+
+    const apiUrl = "http://164.92.191.184:5000/generate-mcq";
+    const textData = text;
+    const requestData = {
+      text: textData,
+    };
+
+    fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Save the data in local storage
+        storeMCQData(data);
+        console.log(data);
+        console.log(Response);
+
+        // Redirect to the results page
+        console.log(switchNav.textContent);
+
+        window.location.href = "results.html";
+      })
+      .catch((error) => {
+        console.error("Error fetching MCQ data:", error);
+        displayErrorMessage("Failed to fetch MCQ data");
+      })
+      .finally(() => {
+        spinner.style.display = "none";
+        spinnerOverlay.style.display = "none";
+      });
+  } catch (error) {
+    console.error("Error:", error);
+    displayErrorMessage("Invalid input");
+  }
+}
 
 function retrieveMCQData() {
   const mcqData = JSON.parse(localStorage.getItem("mcqData"));
@@ -149,7 +168,7 @@ function displayMCQs(data) {
 }
 
 // download pdf
-// ("Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.IBM has a rich history with machine learning. One of its own, Arthur Samuel, is credited for coining the term, “machine learning” with his research");
+
 function generatePDF() {
   const element = document.body; // Replace this with the desired element containing your content
 
@@ -183,18 +202,4 @@ function generatePDF() {
     navigationElement.style.display = "flex";
     downloadBtn.style.display = "block";
   }
-}
-
-
-
- // scroling
-
-window.onscroll=function(){
-   // console.log(this.scrollY)
-
-   this.scrollY>=200?scrollBottom.style.display="none": scrollBottom.style.display="block";
-}
-scrollBottom.onclick=function(){
-  console.log('ok');
-  window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
 }

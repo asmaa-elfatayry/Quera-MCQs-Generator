@@ -71,6 +71,22 @@
         </video>
     </main>
     <!-- js scripts  -->
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            // scroling
+            const scrollBottom = document.querySelector(".scroll");
+            window.onscroll = function () {
+                // console.log(this.scrollY)
+
+                this.scrollY >= 250 ? scrollBottom.style.display = "none" : scrollBottom.style.display = "block";
+            }
+            scrollBottom.onclick = function () {
+                console.log('ok');
+                window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
+            }
+
+        })
+    </script>
     <script src="./js/index.js"></script>
 </body>
 
