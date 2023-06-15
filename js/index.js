@@ -133,6 +133,19 @@ function retrieveMCQData() {
   }
 }
 
+function capitalizeFirstLetter(str) {
+  var splitStr = str.toLowerCase().split(" ");
+
+  for (var i = 0; i < splitStr.length; i++) {
+    if (splitStr.length[i] < splitStr.length) {
+      splitStr[i].charAt(0).toUpperCase();
+    }
+
+    str = splitStr.join(" ");
+  }
+
+  return str;
+}
 function displayMCQs(data) {
   const questions = data;
   let i = 1;
@@ -151,7 +164,9 @@ function displayMCQs(data) {
     question.choices.forEach((choice, choiceIndex) => {
       const choiceItem = document.createElement("li");
       const choiceLabel = String.fromCharCode(97 + choiceIndex); // 'a', 'b', 'c', 'd'
-      choiceItem.textContent = choiceLabel + ") " + choice;
+      choiceItem.textContent =
+        choiceLabel + ") " + capitalizeFirstLetter(choice);
+
       choicesList.appendChild(choiceItem);
     });
     questionDiv.appendChild(choicesList);
