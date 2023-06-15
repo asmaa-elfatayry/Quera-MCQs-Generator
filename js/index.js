@@ -12,7 +12,7 @@ const menue = document.querySelector(".menue .bar");
 const menueClose = document.querySelector(".menue .close");
 const menueOptions = document.querySelector(".pages");
 const switchNav = document.querySelector(".switch");
-
+const backGenerate = document.querySelector(".back");
 document.querySelector(".logo").addEventListener("click", () => {
   window.location.href = "../index.html";
 });
@@ -193,6 +193,7 @@ function generatePDF() {
   if (navigationElement || downloadBtn) {
     navigationElement.style.display = "none";
     downloadBtn.style.display = "none";
+    backGenerate.style.display = "none";
   }
 
   // Generate the PDF content
@@ -216,5 +217,6 @@ function generatePDF() {
   if (navigationElement || downloadBtn) {
     navigationElement.style.display = "flex";
     downloadBtn.style.display = "block";
+    backGenerate.style.display = "flex";
   }
 }
