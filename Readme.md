@@ -6,15 +6,12 @@
   <img src="./images/logo.svg" alt="Logo" width="300" height="120" align="right" style="margin-left: 40px;">
   
   <p align="left">
-    <em>Welcome to the AI-Based Question Generator!</em> This project is a graduation project that aims to simplify the process of generating multiple-choice questions from text using artificial intelligence. It provides a versatile platform that can benefit various user groups, including educators, students, and professionals in different domains.
+    <em>Welcome to the AI-based Question Generator!</em> This is a graduation project that aims to simplify the process of generating multiple-choice questions from text using artificial intelligence. It provides a versatile platform that can benefit various user groups, including educators, students, and professionals in different domains.
   </p>
 </div>
 
 ## Live Repository
 
-Check out the live repository of the AI-Based Multiple-Choice Question Generator: [Live Repo](http://3.83.193.68/index.html)
-
-OR Scan 
 <div >
 <img src="./Quera_QR.png" alt="QR" width="230" height="230"  style="margin: auto;" >
 </div>
